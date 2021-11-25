@@ -1,6 +1,9 @@
 import { APIConsumer } from "../../services/APIConsumer"
-const LoginUser = () => {    
+import { useDispatch } from "react-redux"
+import { login } from "../../services/actions/actionCreator"
 
+const LoginUser = () => {    
+    const dispatch = useDispatch()
     const handleChanges = async (e) => {
         e.preventDefault()
         await APIConsumer.loginUser(JSON.stringify({email: e.target.email.value, password: e.target.password.value}))  
@@ -16,7 +19,7 @@ const LoginUser = () => {
                 <label>Contraseña</label>
                 <input type='password' name='password' placeholder='Contraseña' required />
             </div>    
-            <input type='submit' value='Login' className='btn btn-block' />
+            <input onSubmit={()=>dispatch(login())}type='submit' value='Login' className='btn btn-block' />
         </form>
     )
 }
