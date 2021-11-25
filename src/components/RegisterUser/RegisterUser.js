@@ -5,8 +5,12 @@ const RegisterUser = () => {
     const navigate = useNavigate()
     const handleChanges = async (e) => {
         e.preventDefault()
-        await APIConsumer.registerUser(JSON.stringify({"fullName": e.target.fullName.value ,"email": e.target.email.value, "phoneNumber": e.target.phoneNumber.value, "password": e.target.password.value}))            
-        navigate('/login')
+        await APIConsumer.registerUser(JSON.stringify({
+            "fullName": e.target.fullName.value,
+            "email": e.target.email.value, 
+            "phoneNumber": e.target.phoneNumber.value, 
+            "password": e.target.password.value}))            
+        navigate('/')
         }
 
 return (
