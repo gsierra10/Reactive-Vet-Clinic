@@ -1,4 +1,4 @@
-import {LOG_IN} from "../actions"
+import {LOG_IN} from "../actions/actionTypes"
 
 const inititalState = {
     login: false

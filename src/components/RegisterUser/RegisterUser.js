@@ -1,4 +1,4 @@
-import APIConsumer from "../../services/apiConsumer"
+import APIConsumer from "../../services/APIConsumer"
 import { useNavigate } from "react-router"
 
 const RegisterUser = () => {
