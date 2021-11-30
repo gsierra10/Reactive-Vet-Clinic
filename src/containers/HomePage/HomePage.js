@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header'
 const HomePage = () => {
     return (
         <div>
-            <Header />
+            {/* <Header /> */}
             <LoginUser />
         </div>
     )

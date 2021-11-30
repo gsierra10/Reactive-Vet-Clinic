@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux"
+//import { useSelector } from "react-redux"
 // import { Provider } from "react-redux"
 // import store from "../../services/store"
 import {
@@ -11,26 +11,23 @@ import {
   } from '../HeaderNavBar/HeaderNavBar';
   
   const Header = () => {
-    const login = useSelector((state)=>state.login )
+    //const login = useSelector((state)=>state.login )
     return (
       <>
         <Nav>
-          <NavLink to='/'>
-            <img src={require('../../images/logo192.png')} alt='logo' />
-          </NavLink>
           <Bars />
           <NavMenu>
-            <NavLink to='/about' activeStyle>
-              About
+            <NavLink to='/' activeStyle>
+              Home 
             </NavLink>
             <NavLink to='/services' activeStyle>
-              Services
+              Servicios
             </NavLink>
-            <NavLink to='/contact-us' activeStyle>
-              Contact Us
+            <NavLink to='/userProfile' activeStyle>
+              Perfil
             </NavLink>
-            <NavLink to='/sign-up' activeStyle>
-              Sign Up
+            <NavLink to='/register' activeStyle>
+              Registrate
             </NavLink>
             {/* Second Nav */}
             {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}

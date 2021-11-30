@@ -12,6 +12,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <BrowserRouter>
+        <Header />
           <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="/register" element={<RegisterUserPage />}/>
