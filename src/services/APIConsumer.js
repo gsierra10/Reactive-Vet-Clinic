@@ -7,11 +7,11 @@ export const APIConsumer = {
         try{
             let result = await fetch('http://localhost:5000/clients/login', {
                 method: "POST",
-                headers: {'Content-Type': 'application/json'},
+                headers: {'Content-Type': 'application/json', },
                 body: clientData
             })
             result = await result.json()
-            localStorage.setItem('token', result.clientData)  
+            localStorage.setItem('token', result.client)  
             if (!result.mensaje) {
                 store.dispatch({
                     type: LOG_IN,

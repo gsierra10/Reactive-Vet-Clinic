@@ -10,15 +10,15 @@ import { Provider } from 'react-redux'
 function App() {
   return (
     <Provider store={store}>
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/register" element={<RegisterUserPage />}/>
-          <Route path="/userProfile" element={<ProfilePage />}/>
-        </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/register" element={<RegisterUserPage />}/>
+            <Route path="/userProfile" element={<ProfilePage />}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </Provider>
   );
 }
