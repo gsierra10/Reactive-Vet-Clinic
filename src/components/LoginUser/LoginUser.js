@@ -2,12 +2,15 @@ import { APIConsumer } from "../../services/APIConsumer"
 import { useDispatch } from "react-redux"
 import { login } from "../../services/actions/actionCreator"
 import './LoginUser.scss'
+import { useNavigate } from "react-router"
 
 const LoginUser = () => {    
     const dispatch = useDispatch()
     const handleChanges = async (e) => {
+        const navigate = useNavigate
         e.preventDefault()
         await APIConsumer.loginUser(JSON.stringify({email: e.target.email.value, password: e.target.password.value}))  
+        navigate('/userProfile') 
     }
 
     return (

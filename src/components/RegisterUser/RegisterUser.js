@@ -28,7 +28,7 @@ return (
             </div>
             <div className='form-control'>
                 <label>Numero de telefono</label>
-                <input type='email' name='phoneNumber' placeholder='Añada un numero de telefono/movil.' required />
+                <input type='number' name='phoneNumber' placeholder='Añada un numero de telefono/movil.' required />
             </div>
             <div className='form-control'>
                 <label>Contraseña</label>

@@ -2,7 +2,6 @@ import store from "./store"
 import { LOG_IN, REGISTER_USER } from "./actions/actionTypes"
 
 export const APIConsumer = {
-
     loginUser: async (clientData) => {
         try{
             let result = await fetch('http://localhost:5000/clients/login', {
@@ -34,38 +33,6 @@ export const APIConsumer = {
             console.log(clientData)
         }
     },
-
-    // findMovie: async (data) => {
-    //     try{
-    //         let result = await fetch('http://localhost:5000/movie/',{
-    //             method: "GET",
-    //             body: data
-    //         })
-    //     } catch(data){
-    //         console.log(data)
-    //     }
-    // },
-    // allMovies: async (data) => {
-    //     try{
-    //         let res = await fetch('http://localhost:5000/movies',{
-    //             method:"GET",
-    //         })
-    //         res = await res.json(res.data)
-    //     }catch(data){
-    //         console.log(data)
-    //     }
-    // },
-    // findAllRents: async (data) => {
-    //     try{
-    //         let result = await fetch('http://localhost:5000/rent/all',{
-    //             method: "GET",
-    //             body: data
-    //         })
-    //     } catch(data){
-    //         console.log(data)
-    //     }
-    // }
-
 }
 
 export default APIConsumer

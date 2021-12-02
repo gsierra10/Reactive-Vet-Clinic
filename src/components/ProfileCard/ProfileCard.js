@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router"
 import './ProfileCard.scss'
 
 const ProfileCard = () => {
     const [fullName, setFullname] = useState('Nombre')
     const [email, setEmail] = useState('email')
     const [phoneNumber, setPhoneNumber] = useState('phoneNumber')
+    const navigate = useNavigate()
 
+    const handleChanges = () =>{
+        navigate('/petProfile')
+    }
 
     return (
         <div className="Card">
@@ -18,7 +23,7 @@ const ProfileCard = () => {
                 <h3>{ fullName }</h3>
                 <h4>{ email }</h4>
                 <h4>{ phoneNumber }</h4>
-                <button>Ver Mascotas</button>
+                <button onClick={(e)=>handleChanges(e)}>Ver Mascotas</button>
             </div>
         </div>
     )

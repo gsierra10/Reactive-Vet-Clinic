@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import HomePage from './containers/HomePage/HomePage';
 import RegisterUserPage from './containers/RegisterUserPage/RegisterUserPage';
 import ProfilePage from './containers/ProfilePage/ProfilePage';
+import PetPage from './containers/PetPage/PetPage';
 import store from './services/store';
 import { Provider } from 'react-redux'
 
@@ -15,6 +16,7 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<HomePage />}/>
+            <Route path="/petProfile" element={<PetPage />}/>
             <Route path="/register" element={<RegisterUserPage />}/>
             <Route path="/userProfile" element={<ProfilePage />}/>
           </Routes>
