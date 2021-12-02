@@ -2,7 +2,7 @@ import store from "./store"
 import { LOG_IN, REGISTER_USER } from "./actions/actionTypes"
 
 export const APIConsumer = {
-    loginUser: async (email, password) => {
+    userLogin: async (email, password) => {
         try {
             let result = await fetch('http://localhost:5000/clients/login', {
                 method: "POST",
@@ -91,5 +91,22 @@ export const APIConsumer = {
         pets = await result.json();
         return pets;
     },
+    adminLogin: async (email, password) => {
+        try {
+            let result = await fetch(`http://localhost:5000/admin/login`, {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "email": email,
+                    "password": password
+                })
+            });
+            const adminData = await result.json();
+            console.log(adminData.token);
+            return adminData;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 export default APIConsumer
