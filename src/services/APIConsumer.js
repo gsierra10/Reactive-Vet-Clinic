@@ -1,6 +1,3 @@
-import store from "./store"
-import { LOG_IN, REGISTER_USER } from "./actions/actionTypes"
-
 export const APIConsumer = {
     userLogin: async (email, password) => {
         try {
@@ -15,6 +12,7 @@ export const APIConsumer = {
             
             const userData = await result.json();
             console.log(userData.token);
+            localStorage.setItem('token', result.userData)
             return userData;
         } catch (error) {
             console.log(error);
@@ -43,7 +41,7 @@ export const APIConsumer = {
     
     CreateUser: async (fullName, phoneNumber, email, password) => {
         try {
-            let result = await fetch('http://localhost:5000/clients', {
+            let result = await fetch('http://localhost:5000/clients/register', {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',

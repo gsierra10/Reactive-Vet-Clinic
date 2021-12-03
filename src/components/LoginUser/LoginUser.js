@@ -1,21 +1,29 @@
 import { APIConsumer } from "../../services/APIConsumer"
-import { useDispatch } from "react-redux"
-import { login } from "../../services/actions/actionCreator"
 import './LoginUser.scss'
 import { useNavigate } from "react-router"
+import store from '../../services/store'
+import { LOG_IN } from "../../services/actions/actionTypes"
 
 const LoginUser = () => {    
-    const dispatch = useDispatch()
+    //const navigate = useNavigate
     const handleChanges = async (e) => {
-        const navigate = useNavigate
         e.preventDefault()
-        await APIConsumer.loginUser(JSON.stringify({email: e.target.email.value, password: e.target.password.value}))  
-        navigate('/userProfile') 
+        let res = await APIConsumer.userLogin(JSON.stringify({email: e.target.email.value, password: e.target.password.value}))  
+        //navigate('/userProfile') 
+
+        if(res.userData){
+            store.dispatch({
+                type: LOG_IN,
+                payload:res.userData
+            })
+        } else {
+            console.log('no tengo ni puta idea')
+        }
     }
 
-    return (
+    return (      
         <form className='add-form' onSubmit={(e)=>handleChanges(e)}>
-            <form className='inner-form'>
+            <div className='inner-form'>
                 <h2>Login</h2>
                 <div className='form-control'>
                     <label>Email:</label>
@@ -25,9 +33,9 @@ const LoginUser = () => {
                     <label>Contraseña:</label>
                     <input type='password' name='password' placeholder='Contraseña' required />
                 </div>    
-                <input onSubmit={()=>dispatch(login())}type='submit' value='Login' className='btn btn-block' />
-            </form>
-        </form>
+                <input type='submit' value='Login' className='btn btn-block' />
+            </div>
+        </form>       
     )
 }
 

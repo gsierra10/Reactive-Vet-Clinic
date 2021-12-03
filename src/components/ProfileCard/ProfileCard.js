@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router"
 import './ProfileCard.scss'
+import { APIConsumer } from "../../services/APIConsumer"
 
-const ProfileCard = () => {
+const ProfileCard = (props) => {
     const [fullName, setFullname] = useState('Nombre')
     const [email, setEmail] = useState('email')
     const [phoneNumber, setPhoneNumber] = useState('phoneNumber')
@@ -20,9 +21,9 @@ const ProfileCard = () => {
                 </div>
             </div>
             <div className="lowerCard">
-                <h3>{ fullName }</h3>
-                <h4>{ email }</h4>
-                <h4>{ phoneNumber }</h4>
+                <h3>{ props.fullName }</h3>
+                <h4>{ props.email }</h4>
+                <h4>{ props.phoneNumber }</h4>
                 <button onClick={(e)=>handleChanges(e)}>Ver Mascotas</button>
             </div>
         </div>

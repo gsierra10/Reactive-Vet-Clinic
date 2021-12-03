@@ -6,7 +6,7 @@ const RegisterUser = () => {
     const navigate = useNavigate()
     const handleChanges = async (e) => {
         e.preventDefault()
-        await APIConsumer.registerUser(JSON.stringify({
+        await APIConsumer.CreateUser(JSON.stringify({
             "fullName": e.target.fullName.value,
             "email": e.target.email.value, 
             "phoneNumber": e.target.phoneNumber.value, 
@@ -16,7 +16,7 @@ const RegisterUser = () => {
 
 return (
     <form className='add-form' onSubmit={(e)=>handleChanges(e)}>
-        <form className='iner-form'>
+        <div className='iner-form'>
             <div className='form-control'>
                 <h2>Registro de Usuario</h2>
                 <label>Nombre</label>
@@ -34,12 +34,12 @@ return (
                 <label>Contraseña</label>
                 <input type='password' name='password' placeholder='Añade su contraseña con un mínimo  de 8 carácteres.' required />
             </div>
-            <div className='form-control form-control-check'>
+            {/* <div className='form-control form-control-check'>
                 <label>¿Está de acuerdo con los terminos y condiciones?</label>
                 <input type='checkbox' required />
-            </div>
+            </div> */}
             <input type='submit' value='Registrarse' className='btn btn-block' />
-        </form>
+        </div>
     </form>
 )
 }

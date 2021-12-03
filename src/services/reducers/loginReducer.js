@@ -5,13 +5,10 @@ const inititalState = {
 }
 
 export const loginReducer = (state = inititalState, action) => {
-    switch(action.type){
-        case LOG_IN:
+    if(action.type === LOG_IN){
             return {
-                ...state,
                 login: action.payload
             } 
-        default:
+        }
             return state
-    }
 }
