@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Clinica Veterinaria Sierra
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Este es el segundo proyecto Full Stack del Bootcamp con un Backend heredado de un proyecto anterior con SQL y un nuevo front con React y Redux.
 
-## Available Scripts
+### Instalación 🔧
 
-In the project directory, you can run:
+_Ejecutando: _
 
-### `npm start`
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+_Se instalaran todas las dependencias que ya estan en el proyecto. _
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Ejecutando las pruebas ⚙️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Explica como ejecutar las pruebas automatizadas para este sistema_
 
-### `npm run build`
+### Analice las pruebas end-to-end 🔩
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Lo primero que haremos es ejecutar_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
+```
+_Para levantar la parte frontal del proyecto y tambien ejecutaremos_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+nodemon app/app.js
+```
+_Para levantar la parte Backend del proyecto_
 
-### `npm run eject`
+## Despliegue 📦
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_Hemos hecho un deploy con Heroku para el backend y otro deploy con Amazon Web Services para el frontal_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Construido con 🛠️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* [React.JS](https://es.reactjs.org/) - El framework web usado
+* [NPM](https://www.npmjs.com/) - Manejador de dependencias
+* [NODE.JS](https://nodejs.org/es/) - Como entorno multiplataforma
+* [MySQL](https://www.mysql.com/) - Como sistema de gestión de base de datos relacional
+* [Redux](https://es.redux.js.org/) - Como libreria de manejo del estado de la aplicacion
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Wiki 📖
 
-## Learn More
+Puedes encontrar mucho más de cómo se utiliza la parte backend de este proyecto en nuestra [Repositorio Backend](https://github.com/gsierra10/ReactVetBackend)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autores ✒️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-### Code Splitting
+* **Gustavo Sierra** - *Trabajo Completo* - [gsierra10](https://github.com/gsierra10)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
-### Analyzing the Bundle Size
+## Licencia 📄
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
